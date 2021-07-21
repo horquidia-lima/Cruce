@@ -1,0 +1,36 @@
+.banner {
+    margin: 6rem 4.8rem 4.5rem;
+}
+.banner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px){
+    .banner{
+        margin: 0;
+    }
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media screen  and (max-width: 640px){
+    .banner{
+        margin: 0;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media screen  and (max-width: 530px){
+    .banner{
+        margin: 0;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+}

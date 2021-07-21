@@ -1,0 +1,61 @@
+ {
+	 "products": [
+		{
+			"image": "./images/daenerys.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 1269,
+			"stock": 3,
+			"sale": true
+		},
+		{
+			"image": "./images/davos.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 2390,
+			"stock": 5,
+			"sale": false
+		},
+		{
+			"image": "./images/tormund.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 300,
+			"stock": 0,
+			"sale": false
+		},
+		{
+			"image": "./images/tyrion.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 1269,
+			"stock": 6,
+			"sale": true
+		},
+		{
+			"image": "./images/jon.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 2390,
+			"stock": 8,
+			
+			"sale": false
+		},
+		{
+			"image": "./images/night.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 2390,
+			"stock": 7,
+			"sale": false
+		},
+		{
+			"image": "./images/brienne.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 1269,
+			"stock": 6,
+			"sale": true
+		},
+		{
+			"image": "./images/ghost.svg",
+			"name": "Funko POP | Game Of Thrones - Daenerys 25",
+			"price": 1269,
+			"stock": 6,
+			"sale": true
+		}
+	]
+ }

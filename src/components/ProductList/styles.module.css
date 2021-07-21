@@ -1,0 +1,21 @@
+/*.itemList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+    width: 1270px;
+    margin: 0 4.8rem 4.8rem;
+    gap: 5rem;
+  
+}*/
+
+@media screen and (max-width: 1400px){
+    .itemList{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 4.8rem 4.8rem;
+        
+    }
+}
+
+
+
