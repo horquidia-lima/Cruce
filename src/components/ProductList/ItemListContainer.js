@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import React, {useContext} from 'react'
+//import axios from 'axios'
 import {ItemList} from './ItemList'
+import { ContextList } from '../../Context/ContextList'
 
-export const ItemListContainer = () => {
-    const baseUrl = 'http://localhost:3001/api/products'
+export const ItemListContainer = (props) => {
+    const [products] = useContext(ContextList)
+    /*const baseUrl = 'http://localhost:3001/api/products'
 
     const [products, setProducts] = useState([])
 
@@ -13,7 +15,7 @@ export const ItemListContainer = () => {
             .then(response => {
                 setProducts(response.data)
             })
-    }, [])
+    }, [])*/
     
     return (
         <div>
