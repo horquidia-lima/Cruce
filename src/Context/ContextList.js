@@ -1,6 +1,7 @@
 import {useState, createContext, useEffect} from 'react'
 import axios from 'axios'
 
+
 export const ContextList = createContext()
 
 export const ListProvider = (props) => {
@@ -15,7 +16,9 @@ export const ListProvider = (props) => {
             .then(response => {
                 setProducts(response.data)
             })
-    }, [])
+    }, [products])
+
+    
     return(
         <ContextList.Provider value={[products, setProducts]}>
             {props.children}

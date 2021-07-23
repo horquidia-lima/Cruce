@@ -48,8 +48,9 @@
     border: none;
 }
 
-@media screen and(max-width: 630px){
-    .rutas div{
-        flex-direction: column;
+@media screen and (max-width:1024px){
+    .rutas {
+        width: 980px;
+        margin: 0 auto 4.8rem;
     }
 }

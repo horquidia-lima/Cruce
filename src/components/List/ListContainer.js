@@ -1,13 +1,13 @@
 import React, {useContext} from 'react'
-import { ListItem } from './ListItem'
+import { List } from './List'
 import { ContextList } from '../../Context/ContextList'
 
 export const ListContainer = (props) => {
 
-    const [products] = useContext(ContextList)
+    const [products, setProducts] = useContext(ContextList)
     return (
         <div>
-            <ListItem products={products}/>
+            <List products={products} setProducts={setProducts}/>
         </div>
     )
 }

@@ -1,7 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Table, TableContainer, TableHead, TableCell, TableBody, TableRow } from '@material-ui/core'
+import {Link} from 'react-router-dom'
+import axios from 'axios'
 
+export const List = ({products, setProducts}) => {
 
-export const List = ({list}) => {
+    const removeProduct = async (id, e) => {
+        console.log(id)
+        await axios.delete(`http://localhost:3001/api/products${id}`)
+        const newProductList = products.filter((item) =>{
+            return item.id !== id
+        })
+
+        setProducts(newProductList)
+    }
+
     return (
         <div>
             <nav className="navbar navbar-expand-sm bg-light navbar-light">
@@ -15,32 +28,35 @@ export const List = ({list}) => {
                 </ul>
             </nav>
 
-            <div className="container-fluid mt-4">
-            <div className="card">
-                <div className="card-body">
-                <table className="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="/">{list.name}</a></td>
-                            <td>{list.price}</td>
-                            <td className="text-right">
-                            <a href="form.html" className="btn"><i className="fa fa-eye"></i></a>
-                            <a href="form.html" className="btn"><i className="fa fa-pencil"></i></a>
-                            <a href="/" className="btn"><i className="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                </div>
-            </div>
-            </div>
+            <TableContainer>
+                <Table>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Nombre</TableCell>
+                            <TableCell>Precio</TableCell>
+                            <TableCell>Acciones</TableCell>
+                        </TableRow>
+                    </TableHead>
+
+                    <TableBody>
+                        {products.map(item => (
+                            <TableRow key={item.id}>
+                                <TableCell>{item.name}</TableCell>
+                                <TableCell>{item.price}</TableCell>
+                                <TableCell>
+                                    <Link to='/' className="fa fa-eye btn"/>   
+                                   <Link to={'/form/' + item.id} className="fa fa-pencil btn">
+                                    
+                                   </Link>
+
+                                    <i className="fa fa-trash btn" onClick={(e) => removeProduct(item.id, e)}></i>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+           
         </div>
     )
 }

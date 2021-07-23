@@ -2,15 +2,15 @@ import Header from "./components/Header/Header";
 import { ItemListContainer } from "./components/ProductList/ItemListContainer";
 import { Rutas } from "./components/Rutas/Rutas";
 import { Form } from "./components/Form/Form";
-import app from './styles/app.module.css'
 import { ListProvider } from "./Context/ContextList";
-
+import { ListContainer } from "./components/List/ListContainer";
+import app from './styles/app.module.css'
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { ListContainer } from "./components/List/ListContainer";
+
 
 const  App = () => {
   return (
@@ -21,12 +21,12 @@ const  App = () => {
             <Route exact path="/">
               <Header/>
               <Rutas/>
-          <ItemListContainer/>
+              <ItemListContainer/>
             </Route>
             <Route path="/list">
               <ListContainer />
             </Route>
-            <Route path="/form">
+            <Route path="/form/:id">
               <Form/>
             </Route>
           </ListProvider>
